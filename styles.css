@@ -1,10 +1,8 @@
-/*Fonts*/
 @font-face {
     font-family: 'Inter';
     src: url('./assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
 }
 
-/*variables*/
 :root{
     --green: hsl(75, 94%, 57%);
     --White: hsl(0, 0%, 100%);
@@ -16,6 +14,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Inter';
 }
 
@@ -25,7 +24,7 @@ html{
 
 body{
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--Grey900);
     display: flex;
     flex-direction: column;
@@ -35,14 +34,14 @@ body{
 
 .profile-container{
     background-color: var(--Grey800);
-    width: 375px;
+    width: 320px;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 20px;
 }
 
@@ -99,10 +98,12 @@ body{
 
 .social-media__item{
     width: 90%;
-    height: 50px;
+    height: 45px;
     background-color: var(--Grey700);
     border-radius: 10px;
     text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 .social-media__link{
@@ -123,9 +124,21 @@ body{
 }
 
 @media (max-width: 426px){
+    body{
+        height: auto;
+    }
+    .profile-container{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .profile__profesion{
+        text-align: center;
+    }
+}
+
+@media (max-width: 320px){
     .profile-container{
         width: 90vw;
-        height: 100%;
     }
 }
 
